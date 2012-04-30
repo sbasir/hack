@@ -1,0 +1,9 @@
+<html>
+<head><title>Expense Tracker</title>
+</head>
+<body>
+  <p>
+    <%= yield %>
+  <p>
+</body>
+</html>
