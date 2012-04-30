@@ -1,0 +1,17 @@
+rvm pkg install zlib
+rvm pkg install openssl
+rvm install 1.9.3 --with-openssl-dir=~/.rvm/usr
+rvm use 1.9.3
+rvm gemset create hack
+rvm 1.9.3@hack
+
+gem install sinatra
+gem install mongo
+gem install rest-client
+
+ruby -rubygems expense.rb
+
+irb
+require 'rest_client'
+RestClient.post "http://localhost:4567/expense", :name => 'Sofy', :email => 'sbasir@dius.com.au'
+
